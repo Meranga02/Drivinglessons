@@ -165,6 +165,11 @@ public class LoginHelperClass {
     }
 
 
+
+
+
+
+
     public boolean matches(@NonNull String regex) {
         return Email.matches(regex);
     }
