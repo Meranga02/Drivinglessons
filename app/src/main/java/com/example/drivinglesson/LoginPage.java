@@ -1,6 +1,11 @@
 package com.example.drivinglesson;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.ActionMode;
+import androidx.appcompat.widget.Toolbar;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,6 +30,21 @@ public class LoginPage extends AppCompatActivity {
         //firebase hooks
         auth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
+    }
+
+    @Nullable
+    @Override
+    public ActionMode startSupportActionMode(@NonNull ActionMode.Callback callback) {
+        return super.startSupportActionMode(callback);
+    }
+
+    @Override
+    public void setSupportActionBar(@Nullable Toolbar toolbar) {
+        super.setSupportActionBar(toolbar);
+    }
+
+    public LoginPage() {
+        super();
     }
 
     public void resetpassword(View view) {
