@@ -13,7 +13,7 @@ import com.example.drivinglesson.R;
 
 public class MessageAdapter extends AppCompatActivity {
 
-    private static final int MSG_TYPE_RIGHT = ;
+    private static final int MSG_TYPE_RIGHT = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,18 +30,5 @@ public class MessageAdapter extends AppCompatActivity {
     public void onSupportActionModeStarted(@NonNull ActionMode mode) {
         super.onSupportActionModeStarted(mode);
     }
-    
-    @NonNull
-    @Override
-    public MessageAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        if (viewType == MSG_TYPE_RIGHT) {
-            View view = LayoutInflater.from(mContext).inflate(R.layout.chat_item_right, parent, false);
-            return new MessageAdapter.ViewHolder(view);
-        } else {
-            View view = LayoutInflater.from(mContext).inflate(R.layout.chat_item_left, parent, false);
-            return new MessageAdapter.ViewHolder(view);
-        }
-}
 
-    public class ViewHolder {
-    }
+}
